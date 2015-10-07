@@ -7,6 +7,8 @@ This is a rough cut of the excellent <a href='http://www.amazon.com/Foobot-Indoo
 
 Please keep in mind the Foobot only samples the environment every 15 minutes or so.  In addition, the device type interacts with the Foobot API via a poll() call.  This means that results may be very delayed (more than an hour?) before your Hub sees the results.  I recommend using Pollster or another polling SmartApp to reduce the latency between SmartThings and Foobot.
 
+<img src='https://cloud.githubusercontent.com/assets/478212/10330990/404531fe-6c97-11e5-93d8-d36b17f7a954.png'>
+
 ##Installation
 
 1. Create a new device type (https://graph.api.smartthings.com/ide/devices)
