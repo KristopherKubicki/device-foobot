@@ -82,7 +82,7 @@ def poll() {
         httpGet(params) {resp ->
             log.debug "resp data: ${resp.data}"
             log.debug "pm: ${resp.data.datapoints[-1][1]}"
-            sendEvent(name: "particle", value: resp.data.datapoints[-1][1].round(1), unit: "µg/m³ PM2.5")
+            sendEvent(name: "particle", value: sprintf("%.2f",resp.data.datapoints[-1][1]), unit: "µg/m³ PM2.5")
             log.debug "tmp: ${resp.data.datapoints[-1][2]}"
             def tmp = resp.data.datapoints[-1][2]
             if(getTemperatureScale() == "C") {
